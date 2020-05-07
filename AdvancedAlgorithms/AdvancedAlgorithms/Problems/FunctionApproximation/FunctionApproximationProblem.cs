@@ -16,16 +16,16 @@ namespace AdvancedAlgorithms.Problems.FunctionApproximation
             this.known_values = new List<ValuePair>();
         }
 
-        protected float Objective(List<float> coefficients)
+        protected double Objective(List<double> coefficients)
         {
-            float sum_diff = 0;
+            double sum_diff = 0;
             foreach (var valuepair in known_values)
             {
-                float x = valuepair.Input;
-                float y = coefficients[0] * (float)Math.Pow(x - coefficients[1], 3) +
-                          coefficients[2] * (float)Math.Pow(x - coefficients[3], 2) +
+                double x = valuepair.Input;
+                double y = coefficients[0] * Math.Pow(x - coefficients[1], 3) +
+                          coefficients[2] * Math.Pow(x - coefficients[3], 2) +
                           coefficients[4];
-                float diff = (float)Math.Pow(y - valuepair.Output, 2);
+                double diff = Math.Pow(y - valuepair.Output, 2);
                 sum_diff += diff;
             }
             return sum_diff;
@@ -40,7 +40,11 @@ namespace AdvancedAlgorithms.Problems.FunctionApproximation
                     while (!sr.EndOfStream)
                     {
                         string[] values = sr.ReadLine().Split('\t');
-                        ValuePair valuepair = new ValuePair(float.Parse(values[0]), float.Parse(values[0]));
+                        string anyád = values[0].Replace('.', ',');
+                        string kurva = values[1].Replace('.', ',');
+                        double egyik = double.Parse(anyád);
+                        double masik = double.Parse(kurva);
+                        ValuePair valuepair = new ValuePair(egyik, masik);
                         this.known_values.Add(valuepair);
                     }
                 }

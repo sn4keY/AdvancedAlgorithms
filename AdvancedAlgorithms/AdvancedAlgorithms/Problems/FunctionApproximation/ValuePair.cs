@@ -8,10 +8,10 @@ namespace AdvancedAlgorithms.Problems.FunctionApproximation
 {
     public class ValuePair
     {
-        public float Input;
-        public float Output;
+        public double Input;
+        public double Output;
 
-        public ValuePair(float input, float output)
+        public ValuePair(double input, double output)
         {
             this.Input = input;
             this.Output = output;
