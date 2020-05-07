@@ -27,6 +27,11 @@ namespace AdvancedAlgorithms.Solutions
             return this.solver.RunAlgorithm();
         }
 
+        public List<double> RunWithInfo()
+        {
+            return this.solver.RunAlgorithmWithInfo();
+        }
+
         public double GetFitness()
         {
             return this.solver.currentFitness;
@@ -37,18 +42,23 @@ namespace AdvancedAlgorithms.Solutions
             return this.solver.elapsedTime;
         }
 
+        public List<double> GetStartingElements()
+        {
+            return this.solver.startElement;
+        }
+
         private List<List<double>> InitializeSearchSpace()
         {
             List<List<double>> searchSpace = new List<List<double>>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i <= 10; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j <= 10; j++)
                 {
-                    for (int k = 0; k < 10; k++)
+                    for (int k = 0; k <= 10; k++)
                     {
-                        for (int l = 0; l < 10; l++)
+                        for (int l = 0; l <= 10; l++)
                         {
-                            for (int m = 0; m < 10; m++)
+                            for (int m = 0; m <= 10; m++)
                             {
                                 searchSpace.Add(new List<double>() { i * 0.5, j * 0.5, k * 0.5, l * 0.5, m * 0.5 });
                             }

@@ -40,10 +40,10 @@ namespace AdvancedAlgorithms.Problems.FunctionApproximation
                     while (!sr.EndOfStream)
                     {
                         string[] values = sr.ReadLine().Split('\t');
-                        string anyád = values[0].Replace('.', ',');
-                        string kurva = values[1].Replace('.', ',');
-                        double egyik = double.Parse(anyád);
-                        double masik = double.Parse(kurva);
+                        string elso = values[0].Replace('.', ',');
+                        string masodik = values[1].Replace('.', ',');
+                        double egyik = double.Parse(elso);
+                        double masik = double.Parse(masodik);
                         ValuePair valuepair = new ValuePair(egyik, masik);
                         this.known_values.Add(valuepair);
                     }
