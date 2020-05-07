@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AdvancedAlgorithms.Problems.FunctionApproximation
 {
-    public class FunctionApproximation
+    public class FunctionApproximationProblem
     {
         protected List<ValuePair> known_values;
 
-        public FunctionApproximation()
+        public FunctionApproximationProblem()
         {
             this.known_values = new List<ValuePair>();
         }

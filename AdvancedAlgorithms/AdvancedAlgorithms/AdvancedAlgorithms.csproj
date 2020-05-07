@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Problems\FunctionApproximation\FunctionApproximation.cs" />
+    <Compile Include="Problems\FunctionApproximation\FunctionApproximationProblem.cs" />
     <Compile Include="Problems\FunctionApproximation\ValuePair.cs" />
     <Compile Include="Problems\TravellingSalesman\Town.cs" />
     <Compile Include="Problems\TravellingSalesman\TravellingSalesmanProblem.cs" />
