@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\GeneticAlgorithm.cs" />
     <Compile Include="Algorithms\NSGA.cs" />
     <Compile Include="Problems\FunctionApproximation\FunctionApproximationProblem.cs" />
     <Compile Include="Problems\FunctionApproximation\ValuePair.cs" />
+    <Compile Include="Problems\Problem.cs" />
     <Compile Include="Problems\TravellingSalesman\Town.cs" />
     <Compile Include="Problems\TravellingSalesman\TravellingSalesmanProblem.cs" />
     <Compile Include="Problems\WorkAssignment\Person.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\TravellingSalesmanNSGA.cs" />
+    <Compile Include="Solutions\WorkAssignmentGenetic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
